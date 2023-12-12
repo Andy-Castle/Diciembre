@@ -75,49 +75,166 @@
 // for (let i = 0; i < cards.length; i++) {
 //     console.log(cards[i]);
 // }
-let sentence = ["Hello ", "my ", "name ", "is ", "Andy"];
-let greetingEl = document.getElementById("greeting-el");
+// let sentence = ["Hello ", "my ", "name ", "is ", "Andy"];
+// let greetingEl = document.getElementById("greeting-el");
 
-for (let i = 0; i < sentence.length; i++) {
-    greetingEl.textContent = sentence[i];
-    console.log(sentence[i]);
-}
+// for (let i = 0; i < sentence.length; i++) {
+//     greetingEl.textContent = sentence[i];
+//     console.log(sentence[i]);
+// }
+// let player1Time = 102;
+// let player2Time = 107;
+// function getFastestRaceTime() {
+//     if (player1Time < player2Time) {
+//         return player1Time;
+//     } else if (player2Time < player1Time) {
+//         return player2Time;
+//     } else {
+//         return player1Time;
+//     }
+// }
+// let fastestRace = getFastestRaceTime();
+// console.log(fastestRace);
+// function totalRace() {
+//     return player1Time + player2Time;
+// }
+// let sumTotalRace = totalRace();
+// console.log(sumTotalRace);
+// let randomNumber = Math.floor(Math.random() * 6) + 1;
+// console.log(randomNumber);
+// function rollDice() {
+//     return Math.floor(Math.random() * 6) + 1;
+// }
+// let dice = rollDice();
+// console.log(dice);
+// let flooredNumber = Math.floor(3.45632);
+// console.log(flooredNumber);
+// let hasCompletedCourse = true;
+// let givesCertificate = true;
+// if (hasCompletedCourse === true && givesCertificate === true) {
+//     generateCertificate();
+// }
+// function generateCertificate() {
+//     console.log("Generating certificate...");
+// }
+// let hasSolvedChallenge = false;
+// let hasHintsLeft = false;
+// if (hasSolvedChallenge === false && hasHintsLeft === false) {
+//     showSolution();
+// }
+// function showSolution() {
+//     console.log("Showing the solution...");
+// }
+// let likesDocumentaries = true;
+// let likesStartups = false;
+// if (likesDocumentaries === true || likesStartups === true) {
+//     recommendMovie();
+// }
+// function recommendMovie() {
+//     console.log("Hey, check out this new film we think you will like!");
+// }
+// let course = {
+//     title: "Learn CSS Grid for free",
+//     lessons: 16,
+//     creator: "Per Herald Borgen",
+//     length: 63,
+//     level: 2,
+//     isFree: true,
+//     tags: ["html", "css"],
+// };
+// console.log(course.tags);
+// let airbnbCastle = {
+//     title: "Kilcolgan",
+//     price: 11231,
+//     isRented: false,
+//     offer: ["Vista al lago", "Vistas al jardín", "Wifi"],
+// };
+// console.log(airbnbCastle.offer);
+// console.log(airbnbCastle.title);
 
 //
-// let firstCard = 10;
-// let secondCard = 4;
-// let cards = [firstCard, secondCard];
-// let sum = firstCard + secondCard;
-// let hasBlackJack = false;
-// let isAlive = true;
-// let message = "";
-// let messageEl = document.getElementById("message-el");
-// let sumEl = document.getElementById("sum-el");
-// let cardsEl = document.getElementById("cards-el");
-// //let sumEl = document.querySelector("#sum-el");
+let player = {
+    name: "Per",
+    chips: 200,
+};
 
-// function startGame() {
-//     renderGame();
-// }
+let cards = [];
+let sum = 0;
+let hasBlackJack = false;
+let isAlive = false;
+let message = "";
+let messageEl = document.getElementById("message-el");
+let sumEl = document.getElementById("sum-el");
+let cardsEl = document.getElementById("cards-el");
+//let sumEl = document.querySelector("#sum-el");
 
-// function renderGame() {
-//     if (sum <= 20) {
-//         message = "Do you want to draw a new card?";
-//     } else if (sum === 21) {
-//         message = "You've got Blackjack";
-//         hasBlackJack = true;
-//     } else {
-//         message = "You're out of the game!";
-//         isAlive = false;
-//     }
-//     messageEl.textContent = message;
-//     sumEl.textContent = "Sum: " + sum;
-//     cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1];
-// }
+let playerEl = document.getElementById("player-el");
 
-// function newCard() {
-//     let thirdCard = 3;
-//     sum += thirdCard;
-//     cards.push(thirdCard);
-//     renderGame();
-// }
+playerEl.textContent = player.name + ": $" + player.chips;
+
+function getRandomCard() {
+    let random = Math.floor(Math.random() * 13) + 1;
+    if (random > 10) {
+        return 10;
+    } else if (random === 1) {
+        return 11;
+    } else {
+        return random;
+    }
+}
+
+function startGame() {
+    isAlive = true;
+
+    let firstCard = getRandomCard();
+    let secondCard = getRandomCard();
+    cards = [firstCard, secondCard];
+    sum = firstCard + secondCard;
+
+    renderGame();
+}
+
+function renderGame() {
+    if (sum <= 20) {
+        message = "Do you want to draw a new card?";
+    } else if (sum === 21) {
+        message = "You've got Blackjack";
+        hasBlackJack = true;
+    } else {
+        message = "You're out of the game!";
+        isAlive = false;
+    }
+
+    cardsEl.textContent = "Cards: ";
+
+    for (let i = 0; i < cards.length; i++) {
+        cardsEl.textContent += cards[i] + " ";
+    }
+
+    messageEl.textContent = message;
+
+    sumEl.textContent = "Sum: " + sum;
+}
+
+function newCard() {
+    if (isAlive === true && hasBlackJack === false) {
+        let thirdCard = getRandomCard();
+        sum += thirdCard;
+        cards.push(thirdCard);
+        renderGame();
+        lossMoney();
+        winMoney();
+    }
+}
+
+function lossMoney() {
+    if (isAlive === false) {
+        playerEl.textContent = player.name + ": $" + (player.chips -= 10);
+    }
+}
+
+function winMoney() {
+    if (isAlive === true && hasBlackJack === true) {
+        playerEl.textContent = player.name + ": $" + (player.chips += 10);
+    }
+}
