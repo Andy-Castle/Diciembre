@@ -36,14 +36,28 @@
 //true
 //false
 
-const welcomeEl = document.getElementById("welcome-el");
+// const welcomeEl = document.getElementById("welcome-el");
 
-let myName = "Andy";
-let myBack = "Welcome Back, ";
-let myEmoji = "🥳";
+//                    parametros
+// function greetUser(name, back, emoji) {
+//     welcomeEl.textContent = `${back} ${name} ${emoji}`;
+// }
+// //            argumentos
+// greetUser("Andy", "Welcome Back, ", "🥳");
 
-function greetUser(name, back, emoji) {
-    welcomeEl.textContent = `${back} ${name} ${emoji} `;
+// function add(num1, num2) {
+//     return num1 + num2;
+// }
+
+// add(3, 4);
+
+// //parameters
+// //arguments
+// //parameters
+// //arguments
+
+function getFirst(arr) {
+    return arr[0];
 }
 
-greetUser(myName, myBack, myEmoji);
+console.log(getFirst(["Andy", "Isaac", "Castillo", "Cordova"]));
