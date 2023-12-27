@@ -1,0 +1,8 @@
+@font-face {
+    src: url("./FujiFantastic-Bold.otf");
+    font-family: japan;
+}
+
+h1 {
+    font-family: japan, sans-serif;
+}
