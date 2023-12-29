@@ -4,7 +4,7 @@ body {
   font-family: "Happy Monkey", cursive, sans-serif;
   text-align: center;
   color: #ffffff;
-  background: #a2d2ff;
+  background: linear-gradient(#a2d2ff, #efb0c9);
 }
 
 #photo {
@@ -51,6 +51,22 @@ p {
   margin: 0 auto;
 }
 
+#happy-gift:hover {
+  background-image: url("./images/happy.gif");
+}
+
+#hot-gift:hover {
+  background-image: url("./images/hot.gif");
+}
+
+#genius-gift:hover {
+  background-image: url("./images/genius.gif");
+}
+
+#badass-gift:hover {
+  background-image: url("./images/badass.gif");
+}
+
 .gift-section {
   margin-top: 50px;
 }
@@ -63,4 +79,22 @@ p {
 .gift-hint {
   text-shadow: 0px 0px 1px black;
   margin-top: 0;
+}
+
+#cheers-gift {
+  height: 200px;
+}
+
+#cheers-gift:hover {
+  background-image: url("./images/cheers.gif");
+}
+
+#footer {
+  font-style: italic;
+  width: 400px;
+  margin: 40px auto 20px;
+}
+
+#footer a {
+  color: white;
 }
