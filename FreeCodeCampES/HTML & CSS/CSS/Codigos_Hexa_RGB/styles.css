@@ -1,0 +1,30 @@
+/*
+*Hexadecimal Code
+*0-9 A-F
+*# 00    00      00
+* Rojo   Verde   Azul
+*/
+
+/* #000
+   #fff
+   #0f0
+   #f00
+   #00f
+   #f0f */
+
+div {
+  background-color: rgb(0, 255, 255);
+}
+
+h2 {
+  color: rgb(255, 0, 0);
+}
+
+img {
+  border-radius: 50%;
+  border: 3px solid rgb(0, 255, 0);
+}
+
+a {
+  color: rgb(255, 0, 255);
+}
