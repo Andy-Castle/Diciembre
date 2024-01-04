@@ -1,0 +1,13 @@
+div {
+  /* background-color: crimson; */
+  border: 4px black solid;
+}
+
+img {
+  margin: 25px;
+  padding: 25px;
+  /* padding: 20px 15px 5px 10px; */
+  /* background-color: yellow; */
+  border: 4px black solid;
+  /* margin: 20px 15px; */
+}
