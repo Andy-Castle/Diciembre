@@ -1,2 +1,2 @@
 
-while (x < 10) {
+function sumar(x, y, z) {
