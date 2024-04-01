@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectores</title>
+    <style>
+      /* Selector Universal */
+      * {
+        color: purple;
+      }
+      /* Selector de tipo */
+      div {
+        color: white;
+      }
+
+      /* Selector de clase */
+      .alert-text {
+        color: red;
+      }
+
+      /* Selector de ID */
+      #title {
+        background-color: red;
+      }
+
+      /* selector de agrupación */
+      .read,
+      .unread {
+        color: white;
+        background-color: black;
+        /* several unique declarations */
+      }
+
+      .unread {
+        cursor: pointer;
+        /* several unique declarations */
+      }
+
+      .read {
+        font-size: medium;
+        /* several unique declarations */
+      }
+    </style>
+  </head>
+  <body>
+    Hola
+    <div>Hello, world!</div>
+    <div>Hello again!</div>
+    <p>Hi...</p>
+    <div>Okay, bye.</div>
+    <div class="alert-text severe-alert">
+      Please agree to our terms of service.
+    </div>
+    <div id="title">My Awesome 90's Page</div>
+  </body>
+</html>
