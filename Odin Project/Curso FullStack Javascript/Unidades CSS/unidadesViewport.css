@@ -1,0 +1,11 @@
+* {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Las unidades vh y vw relacionarse con el tamaño de la ventana 
+gráfica. Específicamente, 1vh es igual a 1% de la altura de la ventana 
+{gráfica y 1vw es igual a 1% del ancho de la ventana gráfica. Estos 
+pueden ser útiles cada vez que desee que algo tenga un tamaño relativo
+a la ventana gráfica, ejemplos que incluyen héroes de altura completa,
+interfaces similares a aplicaciones de pantalla completa. */

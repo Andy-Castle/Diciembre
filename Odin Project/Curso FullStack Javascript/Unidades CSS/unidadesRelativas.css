@@ -1,0 +1,15 @@
+/* Las unidades relativas son unidades que pueden cambiar en 
+función de su contexto */
+
+/* Tanto como em y rem se refieren a un tamaño de fuente, aunqur amenudo
+se usan para definir otros tamaños en CSS. */
+
+* {
+  padding: 10em;
+  margin: 10rem; /*Como regla general, se prefiere rem*/
+}
+
+/* 1em es el font-size de un elemento (o el padre de elementums si 
+lo está usando para establecer font-size). Entonces, por ejemplo, si 
+un elementum font-size es 16px, entonces estableciendo su ancho para 
+4em haría su ancho 64px (16 * 4 == 64) */

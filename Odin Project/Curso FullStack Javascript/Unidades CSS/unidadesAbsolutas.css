@@ -1,0 +1,15 @@
+/* Las unidades absolutas son aquellas que son simepre las mismas
+en cualquier contexto. */
+
+/* PX en la unica unidad absoluta que debe utilizar para proyectos */
+* {
+  font-size: 30px;
+}
+
+/* El resto de unidades tienen mas sentido en una configuración de 
+impresión poque estan relacionados con unidades fisicas como
+in(pulgadas) y cm(centimetros) */
+* {
+  padding: 10in;
+  margin: 10cm;
+}
