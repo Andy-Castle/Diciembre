@@ -1,0 +1,193 @@
+/* Esto es del background */
+.background {
+  /* Using a <background-color> */
+  background: green;
+
+  /* Using a <bg-image> and <repeat-style> */
+  background: url("test.jpg") repeat-y;
+
+  /* Using a <box> and <background-color> */
+  background: border-box red;
+
+  /* A single image, centered and scaled */
+  background: no-repeat center/80% url("../img/image.png");
+
+  /* Global values */
+  background: inherit;
+  background: initial;
+  background: revert;
+  background: revert-layer;
+  background: unset;
+
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: transparent;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+/* Esto es del border */
+.border {
+  /* style */
+  border: solid;
+
+  /* width | style */
+  border: 2px dotted;
+
+  /* style | color */
+  border: outset #f33;
+
+  /* width | style | color */
+  border: medium dashed green;
+
+  /* Global values */
+  border: inherit;
+  border: initial;
+  border: revert;
+  border: revert-layer;
+  border: unset;
+
+  border-width: medium;
+  border-style: none;
+  border-color: currentColor;
+
+  border-image: none;
+
+  border-top: violet;
+  border-block-start: #f33;
+}
+
+/* Esto es border-radius */
+.border-radius {
+  /* The syntax of the first radius allows one to four values */
+  /* Radius is set for all 4 sides */
+  border-radius: 10px;
+
+  /* top-left-and-bottom-right | top-right-and-bottom-left */
+  border-radius: 10px 5%;
+
+  /* top-left | top-right-and-bottom-left | bottom-right */
+  border-radius: 2px 4px 2px;
+
+  /* top-left | top-right | bottom-right | bottom-left */
+  border-radius: 1px 0 3px 4px;
+
+  /* The syntax of the second radius allows one to four values */
+  /* (first radius values) / radius */
+  border-radius: 10px / 20px;
+
+  /* (first radius values) / top-left-and-bottom-right | top-right-and-bottom-left */
+  border-radius: 10px 5% / 20px 30px;
+
+  /* (first radius values) / top-left | top-right-and-bottom-left | bottom-right */
+  border-radius: 10px 5px 2em / 20px 25px 30%;
+
+  /* (first radius values) / top-left | top-right | bottom-right | bottom-left */
+  border-radius: 10px 5% / 20px 25em 30px 35em;
+
+  /* Global values */
+  border-radius: inherit;
+  border-radius: initial;
+  border-radius: revert;
+  border-radius: revert-layer;
+  border-radius: unset;
+}
+
+.border-radius {
+  border-radius: 1em/5em;
+
+  /* It is equivalent to: */
+  border-top-left-radius: 1em 5em;
+  border-top-right-radius: 1em 5em;
+  border-bottom-right-radius: 1em 5em;
+  border-bottom-left-radius: 1em 5em;
+
+  border-radius: 4px 3px 6px / 2px 4px;
+
+  /* It is equivalent to: */
+  border-top-left-radius: 4px 2px;
+  border-top-right-radius: 3px 4px;
+  border-bottom-right-radius: 6px 2px;
+  border-bottom-left-radius: 3px 4px;
+}
+
+.box-shadow {
+  /* Keyword values */
+  box-shadow: none;
+
+  /* A color and two length values */
+  /* <color> | <length> | <length> */
+  box-shadow: red 60px -16px;
+
+  /* Three length values and a color */
+  /* <length> | <length> | <length> | <color> */
+  box-shadow: 10px 5px 5px black;
+
+  /* Four length values and a color */
+  /* <length> | <length> | <length> | <length> | <color> */
+  box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+
+  /* inset, length values, and a color */
+  /* <inset> | <length> | <length> | <color> */
+  box-shadow: inset 5em 1em gold;
+
+  /* Any number of shadows, separated by commas */
+  box-shadow: 3px 3px red inset, -1em 0 0.4em olive;
+
+  /* Global values */
+  box-shadow: inherit;
+  box-shadow: initial;
+  box-shadow: revert;
+  box-shadow: revert-layer;
+  box-shadow: unset;
+}
+
+.overflow {
+  /* Keyword values */
+  overflow: visible;
+  overflow: hidden;
+  overflow: clip;
+  overflow: scroll;
+  overflow: auto;
+  overflow: hidden visible;
+
+  /* Global values */
+  overflow: inherit;
+  overflow: initial;
+  overflow: revert;
+  overflow: revert-layer;
+  overflow: unset;
+
+  overflow-clip-margin: 0px;
+}
+
+.opacity {
+  opacity: 0.9;
+  opacity: 90%;
+
+  /* Global values */
+  opacity: inherit;
+  opacity: initial;
+  opacity: revert;
+  opacity: revert-layer;
+  opacity: unset;
+
+  background: rgb(0 0 0 / 40%);
+}
+
+.card {
+  transition: opacity 5s, display 5s;
+  background-color: orange;
+
+  transition-behavior: allow-discrete;
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+.card.hidden {
+  display: none;
+  opacity: 0;
+}
