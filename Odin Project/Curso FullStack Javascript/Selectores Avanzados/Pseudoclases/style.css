@@ -1,0 +1,59 @@
+/* 
+:focus se aplica a un elemento que actualmente es seleccionado por el
+usuario, ya sea seleccionándolo con su cursor o usando su teclado.
+
+
+:hover afectará cualquier cosa debajo del puntero del mouse del usuario. 
+Se puede usar para dar un impulso adicional a los botones y enlaces para 
+resaltar que son interactuables, o para activar un menú desplegable.
+
+:active se aplica a los elementos en los que se está haciendo clic
+ actualmente, y es especialmente útil para dar a sus usuarios comentarios
+  de que su acción tuvo un efecto. Este es uno excelente para dar a sus 
+  botones y otros elementos interactivos más comentarios ‘tactile’.
+*/
+
+a {
+  text-decoration: underline;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: yellow;
+}
+
+/* 
+:root es una clase especial que representa el nivel más alto de su }
+documento, el único elemento que no tiene padres. Generalmente cuando 
+se trabaja con la web, esto es equivalente a la html elemento, pero hay 
+un pocas diferencias sutiles entre :root y html.
+
+
+:first-child y :last-child coincidirá con elementos que son el 
+primer o último hermano.
+
+:empty coincidirá con elementos que no tienen hijos, y :only-child 
+coincidirá con elementos que no tienen hermanos.
+
+Para un enfoque más dinámico podemos utilizar :nth-child. 
+Esta es una pseudoclase flexible con algunos usos diferentes.
+*/
+
+.myList:nth-child(5) {
+  /* Selects the 5th element with class myList */
+}
+
+.myList:nth-child(3n) {
+  /* Selects every 3rd element with class myList */
+}
+
+.myList:nth-child(3n + 3) {
+  /* Selects every 3rd element with class myList, beginning with the 3rd */
+}
+
+.myList:nth-child(even) {
+  /* Selects every even element with class myList */
+}

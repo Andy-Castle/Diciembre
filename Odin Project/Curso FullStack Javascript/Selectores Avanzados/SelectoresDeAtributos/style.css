@@ -1,0 +1,60 @@
+/* 
+[attribute]- Este selector general seleccionará cualquier cosa donde
+exista el atributo dado. Su valor no importa.
+
+selector[attribute]- Opcionalmente podemos combinar nuestros
+selectores de atributos con otros tipos de selectores, como 
+selectores de clase o elementos.
+
+[attribute="value"] - Para ser realmente específicos, podemos 
+usar = para hacer coincidir un atributo específico con un valor 
+específico.
+
+
+*/
+
+[src] {
+  /* This will target any element that has a src attribute. */
+}
+
+img[src] {
+  /* This will only target img elements that have a src attribute. */
+}
+
+img[src="puppy.jpg"] {
+  /* This will target img elements with a src attribute that is exactly "puppy.jpg" */
+}
+
+/* 
+[attribute^="value"] - ^= Coincidirá con las cuerdas desde el principio.
+
+[attribute$="value"] - $= Coincidirá con las cuerdas desde el final.
+
+[attribute*="value"] - *= El selector de comodín coincidirá en cualquier 
+lugar dentro de la cadena.
+
+*/
+
+[class^="aus"] {
+  /* Classes are attributes too!
+    This will target any class that begins with 'aus':
+    class='austria'
+    class='australia'
+  */
+}
+
+[src$=".jpg"] {
+  /* This will target any src attribute that ends in '.jpg':
+  src='puppy.jpg'
+  src='kitten.jpg'
+  */
+}
+
+[for*="ill"] {
+  /* This will target any for attribute that has 'ill' anywhere inside it:
+  for="bill"
+  for="jill"
+  for="silly"
+  for="ill"
+  */
+}

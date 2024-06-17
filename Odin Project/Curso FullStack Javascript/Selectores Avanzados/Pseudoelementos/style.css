@@ -1,0 +1,22 @@
+/* 
+::marker le permite personalizar el estilo de su <li> elements’ 
+balas o números.
+
+::first-letter y ::first-line permítete (¡lo adivinaste!) dale 
+un estilo especial a la primera letra o línea de algún texto.
+
+::selectionle permite cambiar el resaltado cuando un usuario
+selecciona texto en la página.
+
+::before y ::after permítanos agregar elementos adicionales
+a la página con CSS, en lugar de HTML. Usarlo para decorar texto
+de varias maneras es un caso de uso común.
+*/
+
+.emojify::before {
+  content: "😎 🥸 🤓";
+}
+
+.emojify::after {
+  content: "🤓 🥸 😎";
+}

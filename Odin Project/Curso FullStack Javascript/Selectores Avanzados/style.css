@@ -1,0 +1,40 @@
+/* > - el combinador de niños
++ - el combinador de hermanos adyacente
+~ - el combinador general de hermanos */
+
+main div {
+  color: purple;
+}
+
+/* Esta regla solo seleccionara
+los divs con la clase child */
+main > div {
+  color: green;
+}
+
+/* Esta regla seleccinara solo los
+divs con la clase grand-child */
+main > div > div {
+  color: brown;
+}
+
+/* Este regla selccionara solo el
+selector del div con la clase child
+group2 */
+.group1 + div {
+  color: blue;
+}
+
+/* Esta regla seleccionara solo el
+selector del div con la clase child
+group3 */
+.group1 + div + div {
+  color: pink;
+}
+
+/* Esta regla seleccionara todos los 
+del .group1 hermanos, en este caso
+los del 2 y 3 .child divs */
+.group1 ~ div {
+  background-color: yellow;
+}
