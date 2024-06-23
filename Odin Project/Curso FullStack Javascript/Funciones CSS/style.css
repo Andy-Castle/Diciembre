@@ -1,0 +1,5 @@
+main {
+  color: rgb(0, 42, 255);
+  background: linear-gradient(90deg, blue, red, green);
+  height: 100px;
+}

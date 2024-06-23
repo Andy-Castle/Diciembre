@@ -1,0 +1,5 @@
+.fallback {
+  --color-text: white;
+  background-color: var(--undeclared-property, black);
+  color: var(--undeclared-again, var(--color-text, yellow));
+}
